@@ -1,0 +1,55 @@
+#box_main{
+	
+	float: left;
+	width: 600px;
+	border-color: #333333;
+	border-width: 1px;
+	
+}
+
+
+
+#box_side {
+	float: right;
+	background-color: yellow;
+	border-width: 1px;
+	
+	
+}
+
+
+
+
+
+.box_item{
+	border-bottom: 2px solid gray;
+	margin: 50px;
+	padding-bottom: 2px;
+	
+	
+	
+}
+
+.box_item_image{
+	display: inline;
+	margin: 20px;
+}
+
+
+.box_item_image img{
+	width: 200px;
+	height: 100px;
+	display: inline;
+	
+}
+
+.box_item_details{
+	
+	display: inline-block;
+	
+}
+
+.box_item_actions li{	
+	display: inline;	
+}
+

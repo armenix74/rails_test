@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Clear', :controller => 'cart', :action => 'clear' %>
+<%= link_to 'Destroy', @cart, :confirm => 'Are you sure?', :method => :delete %>
+
+<table>
+  <tr>
+    <th>prodotto</th>
+    <th>quantita</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cart.cart_items.each do |ci| %>
+  <tr>
+    <td><%= ci.product_id %></td>
+    <td><%= ci.quantity %></td>
+    
+<% 
+=begin 
+%>
+    <td><%= link_to 'Show', product(ci.product_id) %></td>
+    <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
+    <td><%= link_to 'Destroy', cart, :confirm => 'Are you sure?', :method => :delete %></td>
+<% 
+=end 
+%>    
+    
+  </tr>
+<% end %>
+</table>

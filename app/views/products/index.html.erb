@@ -1,0 +1,63 @@
+<h1>Listing products</h1>
+
+<div class="box_items">			
+		<% @products.each do |product| %>
+		  <div class="box_item" >
+		  	 <div class="box_item_image"> 
+		  	 	<%= image_tag(product.image_url) %>
+		  	 </div>
+		  	 
+		  	<div class="box_item_details">
+		  		<p> Title: <%= product.title %> </p> 
+           		<p> Description: <%= product.description %> </p>    
+    			<p> Price: <%= number_to_currency(product.price, :unit => "Euro ") %></p>
+		  		
+		  	</div>
+		  	<div class="box_item_actions">
+		  		<ul>	  			
+		  					  			
+		  			<li> <%= link_to 'Show', product %> </li>
+		  			<li> <%= link_to 'Edit', edit_product_path(product) %></li>
+		  			<li> <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %>	 </li>
+		  			<li> <%= link_to 'Add to cart', :controller => "carts", :action => "add_to_cart", :id => product.id %> </li>
+		  					  			
+		  		</ul> 
+		  	</div>
+		  </div>
+		<% end %>
+	
+	
+</div>
+
+
+<!--	
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.title %></td>
+    <td><%= product.description %></td>
+    <td><%= image_tag(product.image_url, :size =>"100x50") %></td>
+    <td><%= product.price %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+-->
+
+<br />
+
+<%= link_to 'New Product', new_product_path %>
