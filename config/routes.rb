@@ -1,5 +1,5 @@
 TestProject::Application.routes.draw do
-  resources :cart_items
+  # resources :cart_items
 
   resources :carts
 
