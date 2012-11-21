@@ -11,12 +11,20 @@
     <th></th>
   </tr>
 
-<% @cart.cart_items.each do |ci| %>
-	<%= render :partial => 'cart/item', :ci => ci%>  
-    
+<%= render :partial => 'carts/cart_item', :collection =>@cart.cart_items %>
+
+
+</table>
+
 <%
 =begin 
 %>
+
+
+	
+<% @cart.cart_items.each do |ci| %>
+	<%= render :partial => 'carts/item', :item => ci%>
+<%
 
 <tr>
     <td><%= ci.product_id %></td>
@@ -30,5 +38,3 @@
 %>    
     
 
-<% end %>
-</table>

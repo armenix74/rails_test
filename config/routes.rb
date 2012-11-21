@@ -1,4 +1,6 @@
 TestProject::Application.routes.draw do
+  get "home/index"
+
   # resources :cart_items
 
   resources :carts
