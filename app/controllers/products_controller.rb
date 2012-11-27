@@ -2,7 +2,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
   def index
-    @products = Product.all
+    #@products = Product.all
+    
+    # get all products with pagination
+    @products = Product.paginate(:page => params[:page], :per_page => 5)
+    p @products
+    
     @cart = current_cart    
     
     respond_to do |format|

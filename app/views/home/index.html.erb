@@ -1,21 +1,15 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Welcome to the Home of project</h1>
 
 <div>
-	<h1> List of controllers</h1>
-		
-	<%= @controller_list.inspect %>
-	
+	<h3> List of available controllers </h1>
+	<ul>
 		<% @controller_list.each do |controller| %>
-		<div>
-			
-		  ciao -  <%= link_to 'controller:' , controller %>
-			
-			</div>
-		 
-		<% end %>	  	 
-	
-	
-</div>
 
+		<li>
+			<%= link_to controller.first , controller.last %>
+		</li>
+
+		<% end %>
+	</ul>
+</div>
 
