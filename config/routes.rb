@@ -1,6 +1,6 @@
 TestProject::Application.routes.draw do
   
-  get "home/index"
+  devise_for :users
 
   # resources :cart_items
 
@@ -71,7 +71,7 @@ TestProject::Application.routes.draw do
   
   # match ':controller(/:action(/:id(.:format)))'
   
-   match ':controller(/:action(/:id(.:format)))'
+   #match ':controller(/:action(/:id(.:format)))'
  
   
   

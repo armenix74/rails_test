@@ -1,0 +1,10 @@
+1) continuare a indagare la configurazione dei DEVISE. 
+- manca il sign_out.
+- capire bene cosa succede nella registrazione, login, logout.
+
+2) Inserire CAN-CAN per la gestione dei ruoli.
+
+3) customizzare le view di DEVISE.
+ 
+
+ 

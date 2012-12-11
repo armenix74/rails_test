@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
+  # def after_sign_in_path_for(resource)
+    # params[:next] || super
+  # end
+#   
   def logged_user
     session[:user_id] = User.last.id unless session.has_key? :user_id    
     return  session[:user_id]

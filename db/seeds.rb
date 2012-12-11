@@ -13,8 +13,8 @@ Product.delete_all
 
 # creazione di 2 utenti, uno del gruppo ADMIN e uno del gruppo USER
 
-User.create (:username => "admin", :password =>"admin")
-User.create (:username => "user", :password =>"user")
+User.create (:username => "admin", :password =>"password", :email =>'email1@email.it')
+User.create (:username => "user", :password =>"password", :email =>'email2@email.it')
 
 
 # creazione di alcuni prodotti
